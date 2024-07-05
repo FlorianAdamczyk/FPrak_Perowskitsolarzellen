@@ -304,7 +304,7 @@ Perowskitsolarzellen sind aufgrund ihrer hohen Effizienz und vergleichsweise ger
 		Das FTO-beschichtete Substrat wird mit einer Prekursorlösung (0.18 M Titanisopropoxid in Ethanol und HCl) per Spin-Coating bei 2000 rpm beschichtet. Danach werden die Substrate im Röhrenofen bei 450 °C für 20 Minuten erhitzt, um die Titandioxid-Schicht auszubilden.
 	
 		\paragraph{Präparation der Perowskit-Schicht}
-			Die Perowskit-Prekursor-Lösung, bestehend aus 0.8 M Bleiiodid (\ce{PbI2}) in DMF und 2\% \ce{H2O}, wird auf die Substrate aufgeschleudert. Nach 30 Sekunden wird eine 0.3 M Methylammoniumiodid (\ce{CH3NH3I}) Lösung in Isopropanol hinzugefügt. Die Substrate werden anschließend für 10 Minuten auf einer 100°C vorgeheizten Heizplatte erhitzt.
+			Die Perowskit-Prekursor-Lösung, bestehend aus 0.8 M Bleiiodid (\ce{PbI2}) in DMF und 2\% \ce{H2O}, wird auf die Substrate aufgeschleudert. Nach 30 Sekunden wird eine 0.3 M Methylammoniumiodid (\ce{CH3NH3PbI3}) Lösung in Isopropanol hinzugefügt. Die Substrate werden anschließend für 10 Minuten auf einer 100°C vorgeheizten Heizplatte erhitzt.
 	
 	\paragraph{Aufnahme der Absorptionsspektren}
 		Zur Bestimmung des Absorptionsverhaltens der Perowskitschicht wird eine Dunkelmessung, eine Referenzmessung und eine Absorptionsmessung durchgeführt. Die Integrationszeit wird so eingestellt, dass bei der Referenzmessung 95-100\% Intensität erreicht werden. Danach wird die Perowskit-Probe gemessen und die Ergebnisse gespeichert.
@@ -327,8 +327,6 @@ Perowskitsolarzellen sind aufgrund ihrer hohen Effizienz und vergleichsweise ger
 		
 
 \chapter{Auswertung}
-<<<<<<< HEAD
-=======
 	\begin{figure}[ht]
 		\centering
 		\begin{subfigure}[b]{0.45\textwidth}
@@ -354,12 +352,29 @@ Perowskitsolarzellen sind aufgrund ihrer hohen Effizienz und vergleichsweise ger
 		Ab \SI{750}{\nano\meter} ist das Absorptionsminimum der Zellen erreicht. Über dieser Energie liefert die Lichtquelle nicht mehr genügend Intensität, um eine aussagekräftige Absorption zu messen, darum steigt die Kurve wieder an. Dies ist jedoch ein Messfehler und keine tatsächliche Absorption.		
 
 	\section{Tauc-Plot}
-
->>>>>>> 60f8fc80ecf24e32040edb1334fe3ad92f9d4f3b
+	\begin{figure}[ht]
+		\centering
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{bilder/TaucP1.pdf}
+			\caption{Tauc-Plot der ersten Solarzelle}
+			\label{fig:TaucP1}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{bilder/TaucP2.pdf}
+			\caption{Tauc-Plot der zweiten Solarzelle}
+			\label{fig:TaucP2}
+		\end{subfigure}
+		\caption[Tauc-Plots]{Energie-Absorptionsspektren der beiden Solarzellen mit Tauc-Plot}
+		\label{fig:AbsP1P2Combined}
+	\end{figure}
+		Der Tauc-Plot ist eine Methode, um die Bandlücke eines Halbleiters zu bestimmen. Dazu wird die Absorption gegen die Energie aufgetragen und die Steigung der Geraden im Bereich der Absorptionskante bestimmt. Die Bandlücke entspricht der Energie, bei der die Absorption einen Wert von 0 erreicht. In den Tauc-Plots der Solarzellen sind die Absorptionskanten bei etwa \SI{0,64}{\eV} (Solarzelle 1) und \SI{0,71}{\eV} (Solarzelle 2) zu erkennen. Dies entspricht der Bandlücke des verwendeten Perowskits \ce{CH3NH3PbI3}, die bei \SI{1.55}{\eV} liegt. Die Ergebnisse zeigen, dass die Perowskitschicht in beiden Solarzellen eine direkte Bandlücke aufweist, was für die Effizienz der Solarzelle von entscheidender Bedeutung ist. Jedoch ist die Bandlücke beider Solarzellen viel geringer als die von idealem Perowskit mit circa \SI{1.5}{\eV}. Dies könnte auf eine unvollständige Kristallisation der Perowskitschicht oder eine ungleichmäßige Schichtdicke zurückzuführen sein. Eine geringere Bandlücke führt zu einer geringeren Spannung und damit zu einer geringeren Leistung der Solarzelle. Daher ist es wichtig, die Bandlücke der Perowskitschicht genau zu kontrollieren, um eine hohe Effizienz zu gewährleisten. Die im folgenden Kapitel \ref{ch:Kennlinien} aufgenommenen Kenngrößen der Solarzellen werden die hier zu erwartende geringe Effizienz der Zellen bestätigen.
 
 \section{Charakteristika der Solarzelle}
-Beim aufnehmen der Kennlinien hat die hergestellte Solarzelle 1, nur extrem kleine Ströme bei Beleuchtung gezeigt. Die Kennlinien konnten nur in einem minimalen Spannungsbereich aufgenommen werden. Da Solarzelle 2 ein besseres Verhalten gezeigt hat, werden ihre Messdaten im folgenden ausgewertet.\\
-\subsection{Kennlinien}
+Beim aufnehmen der Kennlinien hat die hergestellte Solarzelle 1, nur extrem kleine Ströme bei Beleuchtung gezeigt. Die Kennlinien konnten nur in einem minimalen Spannungsbereich aufgenommen werden. Da Solarzelle 2 ein besseres Verhalten gezeigt hat, werden ihre Messdaten im folgenden ausgewertet. Das war in der Auswertung der Tauc-Plots auch zu erwarten, denn die zweite Solarzelle hat eine etwas größere Bandlücke als die erste. \\
+\subsection{Kennlinien}\label{ch:Kennlinien}
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{Bilder/Kennlinien.pdf}
