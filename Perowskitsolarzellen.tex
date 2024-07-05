@@ -92,7 +92,7 @@
 		\includegraphics[width = 0.6 \textwidth]{JLU_Giessen-Logo}	%University Logo
 		\\[2.0 cm]
 		% \begin{center}    \textsc{\Large Justus - Liebig - Universität}\\{Giessen}\\[0.8cm]	\end{center}% University Name
-		Versuch 7 des\\
+		Versuch 6 des\\
 		\textsc{\Large Fortgeschrittenen-Praktikums}\\ [0.3 cm]				% Course Code
 		\rule{\linewidth}{0.2 mm} \\[0.4 cm]
 		{ \huge \bfseries \thetitle}\\%%% TITEL HERE
@@ -129,8 +129,8 @@
 	\end{titlepage}
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{3}
 \tableofcontents
 %\newpage
 
@@ -141,7 +141,13 @@
 	
 %\setcounter{chapter}{-1}
 \chapter*{Einleitung}\addcontentsline{toc}{chapter}{Einleitung}
-	\fehlt
+Im Rahmen dieses Versuchs steht die Herstellung und Untersuchung von Perowskitsolarzellen im Mittelpunkt, einem vielversprechenden und aktuellen Thema in der Photovoltaikforschung. Der Versuch bietet eine spannende Gelegenheit, tief in die Welt der modernen Solarzellen einzutauchen und ein besseres Verständnis für die Technologien zu gewinnen, die unseren Alltag nachhaltig beeinflussen.
+
+Es geht darum, eine Perowskitsolarzelle herzustellen und deren Eigenschaften zu analysieren. Zunächst wird auf einem transparenten leitfähigen Oxid (TCO) eine Titandioxidschicht präpariert. Diese Schicht dient als Grundlage für die lichtabsorbierende Methylammoniumbleiiodid-Schicht, die wiederum von einem Lochtransportmaterial überdeckt wird. Dieser mehrschichtige Aufbau ist entscheidend für die Effizienz der Solarzelle und ihre Fähigkeit, Sonnenlicht in elektrische Energie umzuwandeln.
+
+Die optischen Eigenschaften der Perowskitschicht werden anschließend im UV-Vis-Spektrometer untersucht. Diese Analyse ermöglicht es, das Absorptionsverhalten und die Lichtdurchlässigkeit der Schicht zu verstehen, was für die Optimierung der Solarzelle von großer Bedeutung ist. Ein weiterer wichtiger Aspekt des Versuchs ist die Messung des Verhaltens von Strom und Spannung der gesamten Solarzelle unter Bestrahlung mit Weißlicht unterschiedlicher Intensitäten. Diese Messungen sind entscheidend, um die Leistungsfähigkeit der Solarzelle zu bewerten und ihre Effizienz zu bestimmen.
+
+Perowskitsolarzellen sind aufgrund ihrer hohen Effizienz und vergleichsweise geringen Herstellungskosten von großem Interesse für die Forschung und Industrie. Ihre Entwicklung könnte einen bedeutenden Beitrag zur Energiewende und zur Reduktion der \ce{CO2}-Emissionen leisten, indem sie eine kostengünstige und effiziente Alternative zu herkömmlichen Silizium-Solarzellen bieten. Damit bietet dieser Versuch nicht nur einen tiefen Einblick in die Funktionsweise und Herstellung von Perowskitsolarzellen, sondern zeigt auch deren enormes Potenzial für eine nachhaltige Energiezukunft auf. Dies macht den Versuch nicht nur wissenschaftlich relevant, sondern auch äußerst bedeutsam für den Alltag und die zukünftige Energieversorgung.
 
 	% notiz an mich: mit "~ bewirke ich einen geschützten bindestrich an dem nicht getrennt werden darf.
 	% nur eine ~ macht ein geschütztes (normales) Leerzeichen. \, macht ein halbes geschütztes Leerzeichen.
@@ -237,14 +243,93 @@
 
 	
 
-\chapter{Aufbau und Durchführung}
-	\fehlt
-	
-	
+\chapter{Versuchsdurchführung}
+	\paragraph*{Sicherheitsmaßnahmen}
+	Bevor mit dem Versuch begonnen wird, ist es notwendig, sich mit den Sicherheitsdatenblättern der verwendeten Chemikalien vertraut zu machen. Dies gewährleistet ein sicheres Arbeiten im Labor.
 
+	\section[Materialien]{benötigte Materialien}
+	{\small
+		\begin{itemize}[itemsep=0pt, parsep=0pt] % Verringert den Abstand zwischen den Elementen
+			\item Substrate und Chemikalien 
+			\begin{itemize}[itemsep=0pt, parsep=0pt]
+				\item FTO-beschichtete Glassubstrate
+				\item Klebeband
+				\item Titanisopropoxid (\ce{Ti(OCH2)4})
+				\item Ethanol
+				\item Salzsäure (\ce{HCl})
+				\item Bleiiodid (\ce{PbI2})
+				\item Dimethylformamid (DMF)
+				\item Wasser (\ce{H2O})
+				\item Methylammoniumiodid (\ce{CH3NH3I})
+				\item Isopropanol
+				\item Kupferthiocyanat (\ce{CuSCN})
+				\item Propylsulfid
+			\end{itemize}
+		\item Geräte und Ausrüstung
+			\begin{itemize}[itemsep=0pt, parsep=0pt]
+				\item Multimeter
+				\item UV/Ozon-Reiniger
+				\item Spin-Coater
+				\item Eppendorf-Pipetten
+				\item Röhrenofen 
+				\item Heizplatte
+				\item Pinzette
+				\item Absorptionsspektrometer
+				\item Programm \glqq MultiSpec Pro\grqq
+				\item Potentiostat (z.B. Iviumstat)
+				\item Messrechner mit IviumSoft
+				\item Krokodilklemmen
+				\item Pyranometer
+				\item Kerze oder Feuerzeug
+				\item Kupferklebeband
+				\item Leitsilber
+				\item Maske zur Flächenabdeckung
+				\item Klammern zur Befestigung der Rückelektrode
+				\item optische Filter (für Messungen bei verschiedenen Lichtintensitäten)
+			\end{itemize}
+			\item Schutz- und Verbrauchsmaterialien
+			\begin{itemize}[itemsep=0pt, parsep=0pt]
+				\item Handschuhe
+				\item Pipettenspitzen
+				\item Tücher
+				\item Gefahrstoffabfallbehälter
+			\end{itemize}
+		\end{itemize} }
+
+	\section[Durchführung]{Herstellung der Perowskitsolarzellen}
+	\paragraph{Vorbehandlung der Substrate und des Spin-Coaters}
+		Zunächst werden die FTO-Substrate mit Klebeband abgedeckt, um Bereiche für die spätere elektrische Kontaktierung freizuhalten. Die Substrate werden dann im UV/Ozon-Reiniger für 5 Minuten behandelt, um eine bessere Oberflächenbenetzung zu gewährleisten. Während dieser Zeit wird das Innere des Spin-Coaters abgedeckt, um Verunreinigungen zu vermeiden.
+	
+	\paragraph{Herstellen der Titandioxid-Schicht}	
+		Das FTO-beschichtete Substrat wird mit einer Prekursorlösung (0.18 M Titanisopropoxid in Ethanol und HCl) per Spin-Coating bei 2000 rpm beschichtet. Danach werden die Substrate im Röhrenofen bei 450 °C für 20 Minuten erhitzt, um die Titandioxid-Schicht auszubilden.
+	
+		\paragraph{Präparation der Perowskit-Schicht}
+			Die Perowskit-Prekursor-Lösung, bestehend aus 0.8 M Bleiiodid (\ce{PbI2}) in DMF und 2\% \ce{H2O}, wird auf die Substrate aufgeschleudert. Nach 30 Sekunden wird eine 0.3 M Methylammoniumiodid (\ce{CH3NH3I}) Lösung in Isopropanol hinzugefügt. Die Substrate werden anschließend für 10 Minuten auf einer 100°C vorgeheizten Heizplatte erhitzt.
+	
+	\paragraph{Aufnahme der Absorptionsspektren}
+		Zur Bestimmung des Absorptionsverhaltens der Perowskitschicht wird eine Dunkelmessung, eine Referenzmessung und eine Absorptionsmessung durchgeführt. Die Integrationszeit wird so eingestellt, dass bei der Referenzmessung 95-100\% Intensität erreicht werden. Danach wird die Perowskit-Probe gemessen und die Ergebnisse gespeichert.
+	
+	\paragraph{Aufbringen der Kupferthiocyanat-Schicht}	
+		Die \ce{CuSCN}-Schicht wird durch Spin-Coating aufgetragen. 100\,µL einer 0.05\,M CuSCN-Lösung in Propylsulfid werden auf das rotierende Substrat gegeben und bei 100\,°C für 5\.Minuten ausgeheizt.
+	
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.8\textwidth]{Bilder/gebauteZelllen.jpg}
+			\caption{zusammengebaute Perowskitsolarzellen}
+			\label{img:gebauteZellen}
+		\end{figure}
+	\paragraph{Herstellen der Rückelektrode und Zusammenbau der Solarzelle}	
+		Die Rückelektrode wird durch Halten der leitfähigen Seite des FTO-Substrats über eine Flamme rußbeschichtet. Rückelektrode und Probe werden mit Kupferklebeband und Leitsilber kontaktiert. Eine Maske wird auf die Rückseite der Perowskitschicht geklebt, um die belichtete Fläche zu definieren. Die Rückelektrode wird so befestigt, dass kein Kurzschluss entsteht.
+		
+	\paragraph{Messung von Photoströmen und -spannungen}	
+		Zur Messung von Photoströmen und -spannungen wird die Solarzelle mit einer Lichtintensität von \qty{100}{\milli\watt\per\centi\metre\squared} belichtet. Anode und Kathode werden mit Heftklammern  wie in Abbildung \ref*{img:gebauteZellen} zu sehen elektrisch kontaktiert. Die j-V-Kennlinien werden im Dunkeln und unter Belichtung bei verschiedenen Lichtintensitäten gemessen.
+
+		
 
 \chapter{Auswertung}
-	\fehlt
+	
+
+
 \chapter{Fazit}
 	\fehlt
 
@@ -259,13 +344,13 @@
 	\end{thebibliography}
 
 
-\chapter*{Anhang}\label{ch:Anhang}\addcontentsline{toc}{chapter}{Anhang}
-\FloatBarrier
-	\begin{figure}[ht]
-	\centering
-%	\includegraphics[width=\textwidth]{data/Testat.pdf}		
-	\caption[Testat]{Das Testat des Versuchs}
-	\label{fig:Testat}
-\end{figure}
+% \chapter*{Anhang}\label{ch:Anhang}\addcontentsline{toc}{chapter}{Anhang}
+% \FloatBarrier
+% 	\begin{figure}[ht]
+% 	\centering
+% %	\includegraphics[width=\textwidth]{data/Testat.pdf}		
+% 	\caption[Testat]{Das Testat des Versuchs}
+% 	\label{fig:Testat}
+% \end{figure}
 
 \end{document}
