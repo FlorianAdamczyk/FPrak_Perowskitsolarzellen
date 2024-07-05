@@ -406,6 +406,53 @@ Durch lineare Interpolation werden die Kurschlussstromdichten und Leerlaufspannu
 	\caption{Logarithmische Stromdichte-Spannungskennlinien}
 	\label{img:KennlinienLOG}
 \end{figure}
+
+\subsection{Maximum Power Point's}
+\begin{figure} 
+	\centering
+	\includegraphics[width=\textwidth]{Bilder/MPP.pdf}
+	\caption{Leistungsdichte zur Spannung, da wo sie bestimmbar waren, sind die Maximum Power Point's eingetragen}
+	\label{img:MPP}
+\end{figure}
+Um die weiteren Kenngrößen der Solarzelle zu berechnen, wird nun nach dem jeweilgen Maximum Power Point (MPP) gesucht. Dieser ergibt sich als Maximum im Leistungsdichte-Spannungs-Diagramm \ref{img:MPP}. Nur für die Hellkennlinie, 80 \% und 50 \% Belichtung konnte der MPP sinnvoll bestimmt werden. Die Spannung an diesem Punkt $V_{MPP}$, kann direkt aus dem Diagramm abgelesenen werden, die Stromstärke $I_{MPP}$ muss durch einsetzten von $V_{MPP}$ im Kennlinienfeld \ref{ch:Kennlinien} bestimmt werden, wie in Abbildung \ref{img:MPP_Kennlinie} zu erkennen. Die ermittelten Werte sind in Tabelle \ref{table:MPP} festgehalten.
+\begin{figure} 
+	\centering
+	\includegraphics[width=\textwidth]{Bilder/MPP_Kennlinie.pdf}
+	\caption{MPP's im Kennlinienfeld}
+	\label{img:MPP_Kennlinie}
+\end{figure}
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{c c c c}
+		\toprule[1.5pt]
+		Beleuchtung & $V_{MPP}$ [\si{\milli \volt}] & $j_{SC}$ [\si{\milli \ampere \per \milli \meter \squared}] & $I_{SC}$ [\si{\milli \ampere}] \\
+		\midrule
+		hell        & 17.5  &  0.00868  & 0.334      \\
+		80 \%       & 16.0  &  0.00764  & 0.294       \\
+		50 \%       & 12.5  &  0.00578  & 0.222        \\
+		\bottomrule[1.5pt]
+	\end{tabular}
+	\caption{MPP-Daten}\label{table:MPP}
+\end{table}
+
+\subsection{Übersicht über die ermittelten Kenngrößen}
+Zur Übersicht werden nun alle bisher ermittelten Werte in der Tabelle \ref{table:übersicht} zusammengetragen. Zudem wird der Füllfaktor $FF$ wie im Kapitel \ref{ch:Kenngrößen} erläutert berechnet. Auch der Wirkungsgrad $\eta$ wird berechnet wobei die Leistungsdichte des eingestrahlten Lichts gerade die Lichtintensität multipliziert mit der maximalen Leistungsdichte von \SI{100}{ \milli \watt \per \centi \meter \squared}.
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{c c c c c c }
+		\toprule[1.5pt]
+		Beleuchtung & $V_{OC}$ [\si{\milli \volt}] & $j_{SC}$ [\si{\milli \ampere \per \milli \meter \squared}] & $I_{SC}$ [\si{\milli \ampere}] & FF & $\eta$\\
+		\midrule
+		hell        & 35.15  &  0.01729  & 1.353 & 0.123 & 1.519E-4 $= 0.015 \%$  \\
+		80 \%       & 31.79  &  0.01537  & 1.223 & 0.121 & 1.528E-4 $= 0.015 \%$  \\
+		50 \%       & 24.45  &  0.01176  & 0.943 & 0.120 & 1.445E-7 $= 0.014 \%$  \\
+		10 \%       & 6.17   &  0.00313  & 0.237 &   -   & -   \\
+		1  \%       & 0.89   &  0.00048  & 0.034 &   -   & -\\
+		dunkel      & 0.40   &  0.00022  & 0.016 &   -   & - \\
+		\bottomrule[1.5pt]
+	\end{tabular}
+	\caption{Übersicht über die ermittelten Kenngrößen der Solarzelle 2}\label{table:übersicht}
+\end{table}
 \chapter{Fazit}
 	\fehlt
 
