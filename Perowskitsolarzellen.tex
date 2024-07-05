@@ -406,6 +406,32 @@ Durch lineare Interpolation werden die Kurschlussstromdichten und Leerlaufspannu
 	\caption{Logarithmische Stromdichte-Spannungskennlinien}
 	\label{img:KennlinienLOG}
 \end{figure}
+
+\section{Idealitätsfaktor}
+Der Idealitätsfaktor $m$ ist ein Maß für die Güte der Diode, er gibt an, wie stark die Diode ideal ist. Ein Wert von $m=1$ bedeutet, dass die Diode ideal ist, ein Wert von $m>1$ bedeutet, dass die Diode nicht ideal ist. Der Idealitätsfaktor wird aus der Steigung der Kennlinie im Bereich des Maximum Power Points (MPP) bestimmt. Die Steigung wird durch lineare Regression bestimmt, die Ergebnisse sind in Tabelle \ref{table:KurzschlussLeerlauf} aufgetragen. Der Idealitätsfaktor wird dann durch fitten der Gleichung bestimmt: 
+\[U = \frac{m k_b T}{e} \cdot \ln(10) \cdot L \]
+Dabei ist $L$ die eingetrahlte Lichtentensität, welche Logarithmisch aufgetragen wird.\\
+
+\begin{figure}[ht]
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{bilder/Licht_Strom.pdf}
+		\caption{Lichtintensität-Strom-Kennlinie}
+		\label{fig:LichtStrom}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{bilder/Licht_Spannung.pdf}
+		\caption{Lichtintensität-Spannung-Kennlinie}
+		\label{fig:LichtSpannung}
+	\end{subfigure}
+	\caption[Tauc-Plots]{Lichtintensität-Strom- und Spannungskennlinie}
+	\label{fig:LichtKennlinien}
+\end{figure}
+
+
 \chapter{Fazit}
 	\fehlt
 
