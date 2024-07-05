@@ -149,10 +149,16 @@
 \chapter{Theorie}
 	\section{Kenngrößen von Solarzellen}
 	Als wird folgend auf die Grundsätzlichen Eigenschaften von Solarzellen eingegangen, damit die Eigenschaften der hergestellten Perowskitsolarzelle eingeordnet werden können.\\
-	Eine allgemeine Solarzelle verhält sich elektronisch ähnlich, wie eine Halbleiterdiode. In Abbildung \fehlt ist eine Solarzellenkennlinie abgebildet, der Unterschied zur Diodenkennlinie liegt allein in der Verschiebung in negative y-Richtung durch den Wert des Photostroms $j_{ph}$. Aus diesem Grund ist auch die Formel für die Stromcharakteristik bis auf diesen Wert identisch. 
-	\begin{equation}
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=\textwidth]{Bilder/SolarzelleIdeal.pdf}		
+		\caption[Kennlinie ideale Solarzelle]{Stromdichte - Spannungskennlinie einer idealen Solarzelle, eingetragen sind zusätzlich wichtige Kenngrößen}
+		\label{img:SolarzelleIdeal}
+	\end{figure}
+	Eine allgemeine Solarzelle verhält sich elektronisch ähnlich, wie eine Halbleiterdiode. In Abbildung \ref{img:SolarzelleIdeal} ist eine Solarzellenkennlinie abgebildet, der Unterschied zur Diodenkennlinie liegt allein in der Verschiebung in y-Richtung durch den Wert des Photostroms $j_{ph}$. Aus diesem Grund ist auch die Formel für die Stromcharakteristik bis auf diesen Wert identisch:
+	\begin{equation}\label{eq:kennlinie}
 		j(V) =  j_S \left(\text{exp}\left(\frac{e V}{m k_B T}\right) - 1\right) - j_{ph}
-	\end{equation}
+	\end{equation} 
 	Der Photostrom kann für Perowskitsolarzellen folgendermaßen ausformuliert werden:
 	\begin{equation}
 		j_{ph} = e I_0 \eta_{CC} \eta_{inj} (1-\text{exp}(-\alpha d))
@@ -160,7 +166,7 @@
 	Die dabei bisher aufgetretenen Variablen sind:
 	\begin{itemize}
 		\item Spannung $V$
-		\item Sättigungsstrom $j_S$
+		\item Sättigungsstromdichte $j_S$
 		\item Elementarladung $e$ und Boltzmannkonstante $k_B$
 		\item Idealitätsfaktor $m$
 		\item Temperatur $T$
@@ -172,11 +178,47 @@
 	\end{itemize}
 	Nach dieser kurzen Einführung können die typischen Kenngrößen von Solarzellen erläutert werden.
 
-	\paragraph{Kurzschlussstromdichte}
-	\paragraph{Leerlaufspannung}
-	\paragraph{Wirkungsgrad}
-	\paragraph{Füllfaktor}
-	\paragraph{externe Quanteneffizient}
+	\paragraph{Kurzschlussstromdichte $j_{SC}$}
+	Die Kurzschlussstromdichte ist gerade die Stromdichte bei einer Spannung von \SI{0}{\volt}, bei Belichtung einer Solarzelle. Sie ist in Abbildung \ref{img:SolarzelleIdeal} eingetragen, und entspricht dem Schnittpunkt mit der y-Achse der Kennlinie. Deshalb lässt sie sich folgend berechnen:
+	\begin{equation}
+		j_{SC} = j(V = 0) = e I_0 \eta_{CC} \eta_{inj} (1-\text{exp}(-\alpha d)) = j_{ph}
+	\end{equation}
+	\paragraph{Leerlaufspannung $V_{OC}$}
+	Die Leerlaufspannung ist die Spannung bei einem Strom von \SI{0}{\ampere}, sie ist daher im Kennlinienfeld \ref{img:SolarzelleIdeal} als Nullstelle zu finden. Sie kann erneut aus der Gleichung \ref{eq:kennlinie} bestimmt werden:
+	\begin{equation}
+		\begin{split}
+			 0 \overset{!}{=}  j_S \left(\text{exp}\left(\frac{e V_{OC}}{m k_B T}\right) - 1\right) - j_{ph}  \\
+			 j_{ph} = j_S \, \text{exp}\left(\frac{e V_{OC}}{m k_B T}\right) \\
+			 \Rightarrow V_{OC} = \text{ln} \left( \frac{j_{ph}}{j_S}\right) \frac{m k_B T}{e}
+		\end{split}
+	\end{equation} 
+	Dabei wurde angenommen, dass $\text{exp}\left(\frac{e V_{OC}}{m k_B T}\right) \gg 1 $ und die Sättigungsstromdichte $j_{SC}$ entspricht gerade der Kurzschlussstromdichte $j_{SC}$, wie im Abschnitt davor gezeigt.
+	\paragraph{Wirkungsgrad $\eta$}
+	In der Abbildung \ref{img:SolarzelleIdeal} ist der sogenannte Maximum Power Point (MPP) eingetragen, er ist dort definiert, wo das Produkt aus der Stromdichte $j$ und der Spannung $V$ maximal ist. Die orangefarbene Fläche mit diesem Punkte, ist die maximale Leistungsdichte. Der Wirkungsgrad ist daher, dass Verhältnis aus dieser maximalen Leistungsdichte zur Leistungsdichte des eingestrahlten Lichts:
+	\begin{equation}
+		\eta = \frac{p_{max}}{p_0} = \frac{V_{MPP} \cdot j_{MPP}}{p_0}
+	\end{equation}
+	\paragraph{Füllfaktor FF}
+	Aus den bisher beschriebenen Kenngrößen, kann der Füllfaktor angegeben werden, in der Abbildung .\ref{img:SolarzelleIdeal} ist eher das Verhältnis des orangen Rechtecks zum blauen Rechteck. Dieser Faktor gibt demnach das Verhältnis der Maximalleistung zur Leerlaufleistung an:
+	\begin{equation}
+		FF = \frac{V_{MPP} \cdot j_{MPP}}{V_{OC} \cdot j_{SC}}
+	\end{equation}  
+
+	\section{Aufbau einer Perowskitsolarzelle}
+		\begin{figure}[ht]
+		\centering
+		\includegraphics[width=\textwidth]{Bilder/AufbauZelle.pdf}		
+		\caption[Aufbau der Perowskit-Solarzelle]{Schematischer Aufbau der Perowskit-Solarzelle}
+		\label{img:AufbauZelle}
+	\end{figure}
+	In Abbildung \ref{img:AufbauZelle} ist schematisch der schichtweise Aufbau einer Perowskit-Solarzelle abgebildet. Die einzelnen Schichten werden folgend von unten nach oben erläutert:
+	\paragraph{Substrat}
+	Die Solarzelle wird nach der Abbildung von der Unterseite beleuchtet, deshalb müssen die ersten Schichten transparent sein. Die erste Glas Schicht bildet eine stabile Unteralge für den Aufbau, dabei ist das Glas mit einem transparenten und leitfähigem Oxid beschichtet. zum Beispiel wird Fluordotiertes Zinnoxid (FTO) verwendet, dieses transportiert die entstehende Ladung zu einer Elektrode.
+	\paragraph{n-leitende Schicht}
+	Es folgt eine n-leitende Schicht, sie muss ebenfalls transparent sein und transportiert die in der Perowskitschicht entstehenden Elektronen ab. Häufige Verwendung findet hier Titanoxid \ce{TiO_{2}}.
+	\paragraph{Perowskitschicht}
+	In der Perowskitschicht werden Elektronen durch einstrahlende Photonen in das Valenzband gehoben, deshalb ist wichtig, dass diese Schicht einen hohen Absorptionskoeffizienten besitzt. In diesem Versuch wird Methylammoniumbleiiodid \ce{CH_3NH_3PbI_3} verwendet
+		
 
 
 
