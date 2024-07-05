@@ -310,7 +310,7 @@ Perowskitsolarzellen sind aufgrund ihrer hohen Effizienz und vergleichsweise ger
 		Zur Bestimmung des Absorptionsverhaltens der Perowskitschicht wird eine Dunkelmessung, eine Referenzmessung und eine Absorptionsmessung durchgeführt. Die Integrationszeit wird so eingestellt, dass bei der Referenzmessung 95-100\% Intensität erreicht werden. Danach wird die Perowskit-Probe gemessen und die Ergebnisse gespeichert.
 	
 	\paragraph{Aufbringen der Kupferthiocyanat-Schicht}	
-		Die \ce{CuSCN}-Schicht wird durch Spin-Coating aufgetragen. 100\,µL einer 0.05\,M CuSCN-Lösung in Propylsulfid werden auf das rotierende Substrat gegeben und bei 100\,°C für 5\.Minuten ausgeheizt.
+		Die \ce{CuSCN}-Schicht wird durch Spin-Coating aufgetragen. 100\,µL einer 0.05\,M CuSCN-Lösung in Propylsulfid werden auf das rotierende Substrat gegeben und bei 100\,°C für \qty{5}{\minute} ausgeheizt.
 	
 		\begin{figure}
 			\centering
@@ -327,7 +327,31 @@ Perowskitsolarzellen sind aufgrund ihrer hohen Effizienz und vergleichsweise ger
 		
 
 \chapter{Auswertung}
-	
+	\begin{figure}[ht]
+		\centering
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{bilder/AbsP1.pdf}
+			\caption{Absorptionsspektrum der ersten Solarzelle}
+			\label{fig:AbsP1}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{bilder/AbsP2.pdf}
+			\caption{Absorptionsspektrum der zweiten Solarzelle}
+			\label{fig:AbsP2}
+		\end{subfigure}
+		\caption{Absorptionsspektren der beiden Solarzellen}
+		\label{fig:AbsP1P2Combined}
+	\end{figure}
+
+	\section{Absorptionsspektren}
+		Die Absorptionsspektren der beiden Solarzellen sind in Abbildung \ref{fig:AbsP1P2Combined} dargestellt. Die Absorption beginnt bei einer Wellenlänge von etwa \SI{300}{\nano\meter} und steigt bis zu einer Wellenlänge von \SI{400}{\nano\meter} (Solarzelle 1) bzw. \SI{500}{\nano\meter} an. Die Absorptionsspektren zeigen, dass die Perowskitschicht in beiden Solarzellen Licht im sichtbaren Bereich absorbiert. Die Absorption ist bei der zweiten Solarzelle stärker als bei der ersten, was auf eine höhere Absorptionsfähigkeit der Perowskitschicht hinweist. Dies ist ein wichtiger Faktor für die Effizienz der Solarzelle, da eine höhere Absorption mehr Photonen einfängt und somit mehr Elektronen erzeugt.
+		Gegen Ende des sichtbaren Bereichs nimmt die Absorption ab, was darauf hindeutet, dass die Perowskitschicht nicht das gesamte Licht absorbiert. Dies könnte auf eine geringere Dicke der Schicht oder eine geringere Absorptionseffizienz zurückzuführen sein.
+		Ab \SI{750}{\nano\meter} ist das Absorptionsminimum der Zellen erreicht. Über dieser Energie liefert die Lichtquelle nicht mehr genügend Intensität, um eine aussagekräftige Absorption zu messen, darum steigt die Kuve wieder an. Dies ist jedoch ein Messfehler und keine tatsächliche Absorption.		
+
+	\section{Tauc-Plot}
 
 
 \chapter{Fazit}
@@ -337,10 +361,32 @@ Perowskitsolarzellen sind aufgrund ihrer hohen Effizienz und vergleichsweise ger
 	
 \begin{thebibliography}{111}%\addcontentsline{toc}{chapter}{Literaturverzeichnis}
 	\bibitem{Anleitung}
-	Anleitung zum Fortgeschrittenen"~Praktikum.\\ \glqq Versuch: Organisch"~anorganisch hybride Perowskitsolarzellen\grqq.\\ Justus-Liebig-Universität Gießen. Sommersemester 2024.
+	Anleitung zum Fortgeschrittenen"~Praktikum.\\ \glqq Versuch:\.Organisch"~anorganisch hybride Perowskitsolarzellen\grqq.\\ Justus-Liebig-Universität Gießen. Sommersemester 2024.
 	
-	\bibitem{Perowskit}
-		\fehlt
+	\bibitem{Boix}
+	Boix, P. P., Nonomura, K., Mathews, N., \& Mhaisalkar, S. G. (2014). Current progress and future perspectives for organic/inorganic perovskite solar cells. Materials Today, 17(1), 16–23. doi:10.1016/j.mattod.2013.12.002.
+
+	\bibitem{Grätzel}
+	Grätzel, M. (2014). The light and shade of perovskite solar cells. Nature Materials, 13(9), 838– 842. doi:10.1038/nmat4065.
+	\bibitem{Kojima}
+	Kojima A et al. (2009). Organometal Halide Perovskites as Visible-Light Sensitizers for Photovoltaic Cells.
+	Journal of the American Chemical Society. DOI: 10.1021/ja809598r.
+	
+	\bibitem{Sharma}
+	Sharma R et al. (2022): Stability and efficiency issues, solutions and advancements in perovskite solar cells: A review. Solar Energy. DOI: 10.1016/j.solener.2022.08.001.
+
+	\bibitem{NREL}
+	National Renewable Energy Laboratory (NREL). Best Research-Cell Efficiencies.
+
+	\bibitem{Green}
+	Green MA et al. (2019). Solar cell efficiency tables (version 55). Progress in Photovoltaics: Research and Applications. DOI: 10.1002/pip.3171.
+
+	\bibitem{Holzhey}
+	Holzhey P et al. (2023): Toward commercialization with lightweight, flexible perovskite solar cells for residential photovoltaics. Joule. DOI: 10.1016/j.joule.2022.12.012.
+
+	\bibitem{Perovskite}
+	Perovskite-Info. The Perovskite Handbook. URL: \url{https://www.perovskite-info.com/}.
+	
 	\end{thebibliography}
 
 
