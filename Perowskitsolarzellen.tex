@@ -351,7 +351,7 @@ Perowskitsolarzellen sind aufgrund ihrer hohen Effizienz und vergleichsweise ger
 	\section{Absorptionsspektren}
 		Die Absorptionsspektren der beiden Solarzellen sind in Abbildung \ref{fig:AbsP1P2Combined} dargestellt. Die Absorption beginnt bei einer Wellenlänge von etwa \SI{300}{\nano\meter} und steigt bis zu einer Wellenlänge von \SI{400}{\nano\meter} (Solarzelle 1) bzw. \SI{500}{\nano\meter} an. Die Absorptionsspektren zeigen, dass die Perowskitschicht in beiden Solarzellen Licht im sichtbaren Bereich absorbiert. Die Absorption ist bei der zweiten Solarzelle stärker als bei der ersten, was auf eine höhere Absorptionsfähigkeit der Perowskitschicht hinweist. Dies ist ein wichtiger Faktor für die Effizienz der Solarzelle, da eine höhere Absorption mehr Photonen einfängt und somit mehr Elektronen erzeugt.
 		Gegen Ende des sichtbaren Bereichs nimmt die Absorption ab, was darauf hindeutet, dass die Perowskitschicht nicht das gesamte Licht absorbiert. Dies könnte auf eine geringere Dicke der Schicht oder eine geringere Absorptionseffizienz zurückzuführen sein.
-		Ab \SI{750}{\nano\meter} ist das Absorptionsminimum der Zellen erreicht. Über dieser Energie liefert die Lichtquelle nicht mehr genügend Intensität, um eine aussagekräftige Absorption zu messen, darum steigt die Kuve wieder an. Dies ist jedoch ein Messfehler und keine tatsächliche Absorption.		
+		Ab \SI{750}{\nano\meter} ist das Absorptionsminimum der Zellen erreicht. Über dieser Energie liefert die Lichtquelle nicht mehr genügend Intensität, um eine aussagekräftige Absorption zu messen, darum steigt die Kurve wieder an. Dies ist jedoch ein Messfehler und keine tatsächliche Absorption.		
 
 	\section{Tauc-Plot}
 
@@ -368,27 +368,27 @@ Beim aufnehmen der Kennlinien hat die hergestellte Solarzelle 1, nur extrem klei
 \end{figure}
 In Abbildung \ref{img:Kennlinien} sind die Stromdichte-Spannungskennlinien für alle gemessenen Lichtintensitäten aufgetragen. Die y-Achse wird in eine Stromdichte umgerechnet, dies geschieht mit der bekannten beleuchteten Fläche $A$. Diese ist kreisrund und hat einen Durchmesser von \SI{7}{\milli \meter}. Insgesamt sehen alle Linien sehr ohmisch aus, in Abbildung \ref{img:KennlinienLOG} ist zu erkennen, das die Solarzelle dennoch minimal ein Diodenverhalten ausweist. Denn bei logarithmischer y-Achse ist die typische Form, wie sie im Theoriekapitel \ref{ch:Kenngrößen} beschrieben wurde, erkennbar.\\
 Ab einer Beleuchtungstärke von 10 \% und mehr, liegt ein Teil der Graphen im positiven Bereich der y-Achse, demzufolge wird tatsächlich Leistung erzeugt, die Solarzelle funktioniert also prinzipiell.\\
-Durch lineare Interpolation werden die Kurschlussstromdichten und Leerlaufspannungen bestimmt, Stromdichten werden über die Fläche wieder in Ströme umgerechnet. Die Ergebnisse daraus sind in Tabelle \fehlt aufgetragen. 
+Durch lineare Interpolation werden die Kurschlussstromdichten und Leerlaufspannungen bestimmt, Stromdichten werden über die Fläche wieder in Ströme umgerechnet. Die Ergebnisse daraus sind in Tabelle \ref{table:KurzschlussLeerlauf} aufgetragen. 
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{c c c c}
 		\toprule[1.5pt]
 		Beleuchtung & $V_{OC}$ [\si{\milli \volt}] & $j_{SC}$ [\si{\milli \ampere \per \milli \meter \squared}] & $I_{SC}$ [\si{\milli \ampere}] \\
 		\midrule
-		hell        & 35.15  &  0.01729  &        \\
-		80 \%       & 31.79  &  0.01537  & 14.175            \\
-		50 \%       & 24.45  &  0.01176  & 11.460            \\
-		10 \%       & 6.17   &  0.00313  & 8.720          \\
-		1  \%       & 0.89   &  0.00048  & 6.416          \\
-		dunkel      & 0.40   &  0.00022  & 6.416          \\
+		hell        & 35.15  &  0.01729  & 1.353      \\
+		80 \%       & 31.79  &  0.01537  & 1.223            \\
+		50 \%       & 24.45  &  0.01176  & 0.943            \\
+		10 \%       & 6.17   &  0.00313  & 0.237          \\
+		1  \%       & 0.89   &  0.00048  & 0.034          \\
+		dunkel      & 0.40   &  0.00022  & 0.016          \\
 		\bottomrule[1.5pt]
 	\end{tabular}
-	\caption{Kurschlussstromdichten und Leerlaufspannungen}\label{table:unendlPot}
+	\caption{Kurschlussstromdichten und Leerlaufspannungen}\label{table:KurzschlussLeerlauf}
 \end{table}
 \begin{figure} 
 	\centering
 	\includegraphics[width=\textwidth]{Bilder/KennlinienLOG.pdf}
-	\caption{[Logarithmische Stromdichte-Spannungskennlinien}
+	\caption{Logarithmische Stromdichte-Spannungskennlinien}
 	\label{img:KennlinienLOG}
 \end{figure}
 \chapter{Fazit}
