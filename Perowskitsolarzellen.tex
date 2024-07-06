@@ -154,14 +154,14 @@ Perowskitsolarzellen sind aufgrund ihrer hohen Effizienz und vergleichsweise ger
 
 \chapter{Theorie}
 	\section{Kenngrößen von Solarzellen}\label{ch:Kenngrößen}
-	Als wird folgend auf die Grundsätzlichen Eigenschaften von Solarzellen eingegangen, damit die Eigenschaften der hergestellten Perowskitsolarzelle eingeordnet werden können.\\
+	Als wird folgend auf die grundsätzlichen Eigenschaften von Solarzellen eingegangen, damit die Eigenschaften der hergestellten Perowskitsolarzelle eingeordnet werden können.\\
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[width=\textwidth]{Bilder/SolarzelleIdeal.pdf}		
 		\caption[Kennlinie ideale Solarzelle]{Stromdichte - Spannungskennlinie einer idealen Solarzelle, eingetragen sind zusätzlich wichtige Kenngrößen}
 		\label{img:SolarzelleIdeal}
 	\end{figure}
-	Eine allgemeine Solarzelle verhält sich elektronisch ähnlich, wie eine Halbleiterdiode. In Abbildung \ref{img:SolarzelleIdeal} ist eine Solarzellenkennlinie abgebildet, der Unterschied zur Diodenkennlinie liegt allein in der Verschiebung in y-Richtung durch den Wert des Photostroms $j_{ph}$. Aus diesem Grund ist auch die Formel für die Stromcharakteristik bis auf diesen Wert identisch:
+	Eine allgemeine Solarzelle verhält sich elektronisch ähnlich wie eine Halbleiterdiode. In Abbildung \ref{img:SolarzelleIdeal} ist eine Solarzellenkennlinie abgebildet, der Unterschied zur Diodenkennlinie liegt allein in der Verschiebung in y-Richtung durch den Wert des Photostroms $j_{ph}$. Aus diesem Grund ist auch die Formel für die Stromcharakteristik bis auf diesen Wert identisch:
 	\begin{equation}\label{eq:kennlinie}
 		j(V) =  j_S \left(\text{exp}\left(\frac{e V}{m k_B T}\right) - 1\right) - j_{ph}
 	\end{equation} 
@@ -436,7 +436,7 @@ Um die weiteren Kenngrößen der Solarzelle zu berechnen, wird nun nach dem jewe
 \end{table}
 
 \subsection{Übersicht über die ermittelten Kenngrößen}
-Zur Übersicht werden nun alle bisher ermittelten Werte in der Tabelle \ref{table:übersicht} zusammengetragen. Zudem wird der Füllfaktor $FF$ wie im Kapitel \ref{ch:Kenngrößen} erläutert berechnet. Auch der Wirkungsgrad $\eta$ wird berechnet wobei die Leistungsdichte des eingestrahlten Lichts gerade die Lichtintensität multipliziert mit der maximalen Leistungsdichte von \SI{100}{ \milli \watt \per \centi \meter \squared}.
+Zur Übersicht werden nun alle bisher ermittelten Werte in der Tabelle \ref{table:übersicht} zusammengetragen. Zudem wird der Füllfaktor, $FF$ wie im Kapitel \ref{ch:Kenngrößen} erläutert, berechnet. Auch der Wirkungsgrad $\eta$ wird berechnet, wobei die Leistungsdichte des eingestrahlten Lichts gerade die Lichtintensität multipliziert mit der maximalen Leistungsdichte von \SI{100}{ \milli \watt \per \centi \meter \squared}.
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{c c c c c c }
@@ -455,11 +455,11 @@ Zur Übersicht werden nun alle bisher ermittelten Werte in der Tabelle \ref{tabl
 \end{table}
 
 \section{Idealitätsfaktor}
-Der Idealitätsfaktor $m$ ist ein Maß für die Güte der Diode, er gibt an, wie stark die Diode ideal ist. Ein Wert von $m=1$ bedeutet, dass die Diode ideal ist, ein Wert von $m>1$ bedeutet, dass die Diode nicht ideal ist. Der Idealitätsfaktor wird aus der Steigung der Kennlinie im Bereich des Maximum Power Points (MPP) bestimmt. Die Steigung wird durch lineare Regression bestimmt, die Ergebnisse sind in Tabelle \ref{table:KurzschlussLeerlauf} aufgetragen. Der Idealitätsfaktor wird dann durch fitten der Gleichung bestimmt: 
+Der Idealitätsfaktor $m$ ist ein Maß für die Güte der Diode; er gibt an, wie stark die Diode ideal ist. Ein Wert von $m=1$ bedeutet, dass die Diode ideal ist; ein Wert von $m>1$ bedeutet, dass die Diode nicht ideal ist. Der Idealitätsfaktor wird aus der Steigung der Kennlinie im Bereich des Maximum Power Points (MPP) bestimmt. Die Steigung wird durch lineare Regression bestimmt, die Ergebnisse sind in Tabelle \ref{table:KurzschlussLeerlauf} aufgetragen. Der Idealitätsfaktor wird dann durch fitten der Gleichung bestimmt: 
 \begin{equation}\label{eq:idealspannung} U = \frac{m k_b T}{e} \cdot \ln(10) \cdot L \end{equation}
-Dabei ist $L$ die eingetrahlte Lichtentensität, welche Logarithmisch aufgetragen wird.\\
-In Abbildung~\ref{fig:LichtStrom} ist die Kurzschlussstromdichte gegen die Lichtintensität aufgetragen. Da die Kurve der Kurzschlussstromdichte nicht strang proportional zur Lichtintensität ist, lässt sich darauf schließen, dass die Ladungsträgerinjektion und die Ladungsträgerkollektion nicht unabhängig von der Bestrahlungsstärke sind und der Strom durch die Solarzelle durch verschiedene Faktoren wie z.B. den Ladungstransport im HTM begrenzt wird. Dies erklärt das abflaschen der Kurve bei höheren Lichtintensitäten.\\
-In Abbildung~\ref{fig:LichtSpannung} ist die Leerlaufspannung gegen die Lichtintensität aufgetragen. Eine ideale Kennlinie würde, wie in der Anleitung \cite{Anleitung} auf Seite 4 erläutert eine lineare Gerade mit Steigung 59\,mV/Dekade aufzeigen. In der realen Solarzelle sinkt die $V_{OC}$ mit abnehmender Lichtintensität stärker, als im idealfall zu erwarten wäre. Also ist der Idealitätsfaktor $m$ größer als 1. Dies bedeutet, dass die Solarzelle nicht ideal ist und die Rekombination der Ladungsträger in der Solarzelle nicht vernachlässigt werden kann. Der Idealitätsfaktor der von uns hergestellten Solarzelle lässt sich durch den Fit mit der Gleichung \ref{eq:idealspannung} zu \hl{$m=6,9$} bestimmen. Dieser Wert ist sehr hoch und zeigt, dass die Solarzelle keineswegs ideal ist. Das konnte man auch schon an den Kennlinien erkennen, da sie nicht ideal diodisch waren.\\
+Dabei ist $L$ die eingestrahlte Lichtintensität, welche logarithmisch aufgetragen wird.\\
+In Abbildung~\ref{fig:LichtStrom} ist die Kurzschlussstromdichte gegen die Lichtintensität aufgetragen. Da die Kurve der Kurzschlussstromdichte nicht streng proportional zur Lichtintensität ist, lässt sich darauf schließen, dass die Ladungsträgerinjektion und die Ladungsträgerkollektion nicht unabhängig von der Bestrahlungsstärke sind und der Strom durch die Solarzelle durch verschiedene Faktoren wie z.B. den Ladungstransport im HTM begrenzt wird. Dies erklärt das Abflachen der Kurve bei höheren Lichtintensitäten.\\
+In Abbildung~\ref{fig:LichtSpannung} ist die Leerlaufspannung gegen die Lichtintensität aufgetragen. Eine ideale Kennlinie würde, wie in der Anleitung \cite{Anleitung} auf Seite 4 erläutert, eine lineare Gerade mit Steigung 59\,mV/Dekade aufzeigen. In der realen Solarzelle sinkt die $V_{OC}$ mit abnehmender Lichtintensität stärker, als im Idealfall zu erwarten wäre. Also ist der Idealitätsfaktor $m$ größer als 1. Dies bedeutet, dass die Solarzelle nicht ideal ist und die Rekombination der Ladungsträger in der Solarzelle nicht vernachlässigt werden kann. Der Idealitätsfaktor der von uns hergestellten Solarzelle lässt sich durch den Fit mit der Gleichung \ref{eq:idealspannung} zu \hl{$m=6,9$} bestimmen. Dieser Wert ist sehr hoch und zeigt, dass die Solarzelle keineswegs ideal ist. Das konnte man auch schon an den Kennlinien erkennen, da sie nicht ideal diodisch waren.\\
 
 \begin{figure}[ht]
 	\centering
